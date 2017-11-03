@@ -46,6 +46,7 @@ public class Dron extends JPanel implements Runnable, KeyListener {
 		liveL = liveR = true;
 	}
 
+	// second
 	public Dron() {
 		setPreferredSize(new Dimension(320, 360));
 
@@ -64,6 +65,7 @@ public class Dron extends JPanel implements Runnable, KeyListener {
 		startThread();
 	}
 
+	// third
 	public void startThread() {
 		if (thread == null) {
 			thread = new Thread(this);
@@ -142,6 +144,7 @@ public class Dron extends JPanel implements Runnable, KeyListener {
 		}
 	}
 
+	// いずれかのキーを押したとき
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 		switch (key) {
@@ -159,16 +162,9 @@ public class Dron extends JPanel implements Runnable, KeyListener {
 	public void keyReleased(KeyEvent e) {}
 	public void keyTyped(KeyEvent e) {}
 
+	//first
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(() -> {
-			JFrame frame = new JFrame("Dron!");
-			frame.add(new Dron());
-			// 画面自動調整
-			frame.pack();
-			// 画面を表示
-			frame.setVisible(true);
-			// クローズでアプリケーションを終了
-			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		});
 	}
 }
